@@ -1,59 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Firebase Test</title>
+
+  <!-- Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js"></script>
 </head>
 <body>
 
-<div>hi</div>
-
-
-    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js"></script>
-
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAX_5EfiF4Eaibpo1C8_M05K764HTpv180",
-    authDomain: "sara-database-95ed1.firebaseapp.com",
-    projectId: "sara-database-95ed1",
-    storageBucket: "sara-database-95ed1.firebasestorage.app",
-    messagingSenderId: "626283901292",
-    appId: "1:626283901292:web:d1c7a8e3b77bd409894349",
-    measurementId: "G-RE0DE0P2MD"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+  <div>hi</div>
 
   <script>
-  db.collection("messages").add({
-    name: "You",
-    message: "Happy Birthday!"
-  }).then(() => {
-    console.log("Message added!");
-  });
-</script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAX_5EfiF4Eaibpo1C8_M05K764HTpv180",
+      authDomain: "sara-database-95ed1.firebaseapp.com",
+      projectId: "sara-database-95ed1",
+      storageBucket: "sara-database-95ed1.firebasestorage.app",
+      messagingSenderId: "626283901292",
+      appId: "1:626283901292:web:d1c7a8e3b77bd409894349",
+      measurementId: "G-RE0DE0P2MD"
+    };
 
-  <script>
-  db.collection("messages").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      console.log(doc.id, " => ", doc.data());
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+
+    db.collection("messages").add({
+      name: "You",
+      message: "Happy Birthday!"
+    }).then(() => {
+      console.log("Message added!");
     });
-  });
-</script>
+
+    db.collection("messages").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+      });
+    });
+  </script>
+
 </body>
 </html>
