@@ -1,17 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Firebase Firestore Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
 
-  <!-- Firebase SDK (compat versions for global 'firebase') -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      line-height: 1.6;
+        direction: rtl;
+              text-align: right;
+
+   font-family: "Playpen Sans Arabic", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+    }
+    header {
+background: #372f2f;
+    color: white;
+    padding: 1rem 0rem;
+      direction: ltr;
+
+    border-radius: 1.1rem;
+    margin-top: 0.2rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    }
+    section {
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #ff1493;
+      cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #c71585;
+    }
+    .container{
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    margin: 0 auto;
+    margin-top: 20px;
+    width: fit-content;    /* align-items: center; */
+    row-gap: 4rem;
+    column-gap: 2rem;
+    }
+    .footer-sec{
+        grid-column: span 2;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .countdown {
+        font-size: 1.2rem;
+      }
+         .container{
+
+                grid-template-columns:1fr;
+
+         }
+
+         .footer-sec{
+        grid-column: 1;
+    }
+
+    }
+  </style>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 </head>
 <body>
-  <h1>Firebase Firestore Test</h1>
+  <header style="text-align: center;direction: ltr;">
+    <h1 style="margin: 0;">Sara's Life Site</h1>
+    <p></p>
+  </header>
+<div class="container">
+  <section>
+   <a href=""> <h2>قصص</h2></a>
+    <p>"You are the sunshine in my darkest days and the spark in my happiest moments."</p>
+    <p>"Every memory with you is a treasure. I can’t wait to make more."</p>
+  </section>
+
+  <section>
+    <h2>قصتي </h2>
+    <p>Here’s to all the amazing moments and more to come!</p>
+  </section>
+
+  <section>
+    <a href=""><h2>اهدافي</h2></a>
+    <p>"You are the sunshine in my darkest days and the spark in my happiest moments."</p>
+    <p>"Every memory with you is a treasure. I can’t wait to make more."</p>
+  </section>
+
+  <section>
+    <a href=""><h2>الحروب</h2></a>
+    <p>"You are the sunshine in my darkest days and the spark in my happiest moments."</p>
+    <p>"Every memory with you is a treasure. I can’t wait to make more."</p>
+  </section>
+
+  <section class="footer-sec"   width: 100%;
+    grid-column: span 2;
+    margin: 0 auto;">
+    <a href=""><h2>ايام الحرب </h2></a>
+    <p class="countdown" id="countdown"></p>
+  </section>
+</div>
 
   <script>
+    const targetDate = new Date('2023-10-07T00:00:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = now-targetDate ;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById('countdown').textContent = `عدد ايام الحرب ${days}`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 86400000); // update every day
+  </script>
+    <script>
     // Your Firebase config (replace with your real config!)
     const firebaseConfig = {
       apiKey: "AIzaSyAX_5EfiF4Eaibpo1C8_M05K764HTpv180",
