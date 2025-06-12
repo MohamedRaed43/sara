@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",  ()=> {
   includes.forEach(
     async function(el) {
     const file = el.getAttribute("data-include");
-    const response = await fetch("/"+file);
+    const response = await fetch("sara/"+file);
     if (response.ok) {
       el.innerHTML = await response.text();
     } else {
