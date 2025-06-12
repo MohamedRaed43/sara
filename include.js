@@ -3,8 +3,16 @@ document.addEventListener("DOMContentLoaded",  ()=> {
   includes.forEach(
     async function(el) {
     const file = el.getAttribute("data-include");
-   const depth = window.location.pathname.split("/").length - 2;
-    
+   const name = window.location.pathname.split("/");
+   console.log(name)
+   let depth=-1;
+   
+   let i=1;
+  while (name[name.length-i]!="sara") {
+    console.log(name[name.length-i])
+        depth++;
+        i++;
+  }
     // Go back folders (e.g., '../', '../../', etc.)
     const prefix = '../'.repeat(depth);
 
