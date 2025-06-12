@@ -27,16 +27,16 @@
     const db = firebase.firestore();
 
     // Write test data
-    db.collection("messages").add({
-      name: "You",
-      message: "Happy Birthday!"
-    }).then(() => {
-      console.log("Message added!");
-    }).catch(console.error);
+    // db.collection("messages").add({
+    //   name: "You",
+    //   message: "Happy Birthday!"
+    // }).then(() => {
+    //   console.log("Message added!");
+    // }).catch(console.error);
 
-    // Read test data
-    db.collection("messages").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, "=>", doc.data());
-      });
-    }).catch(console.error);
+    // // Read test data
+    // db.collection("messages").get().then((querySnapshot) => {
+    //   querySnapshot.forEach((doc) => {
+    //     console.log(doc.id, "=>", doc.data());
+    //   });
+    // }).catch(console.error);
