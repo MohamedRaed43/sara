@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-site-sara</title>
+    <link data-include="font.html">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <form action="../index.html" method="POST">
-        <input type="password" name="" id="">
-        <input type="email" name="" id="">
-        <input type="submit" value="Login">
-    </form>
+    <form  id="form" method="post">
+<div class="login-container">
+    <h1>Login</h1>
+    
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <label>
+        <input type="checkbox">
+        <span>Remember me</span>
+    </label>
+
+    <input type="submit" value="Login">
+    <p>Don’t have an account? <a href="">Register</a></p>
+</div>
+</form>
+
+<script src="login.js"></script>
 </body>
 </html>
