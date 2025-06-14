@@ -23,7 +23,7 @@
       <script>
       if(document.cookie!=""){
         let logged_in_span=document.getElementById("logged-in-user")
-        logged_in_span.innerHTML=document.cookie
+        logged_in_span.innerHTML=document.cookie.slice(document.cookie.indexOf('=') + 1)
       }
 
     </script>
