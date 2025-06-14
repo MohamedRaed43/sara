@@ -6,7 +6,7 @@ document.getElementById("form").addEventListener("submit",(e)=>{
     let password=document.getElementById("password");
       db.collection("auth").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-       if(doc.username==username.value && doc.password ==password){
+       if(doc.data().username==username.value && doc.data().password ==password.value){
           ((name,value,days)=>{
             const expire=new Date();
               expire.setTime(expire.getTime() + (days*24*60*60*1000))
