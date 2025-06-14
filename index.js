@@ -24,8 +24,8 @@
     firebase.initializeApp(firebaseConfig);
 
     // Initialize Firestore
-    export const db = firebase.firestore();
-
+    const db = firebase.firestore();
+ export default db;
     // db.collection("messages").add({
     //   name: "You",
     //   message: "Happy Birthday!"
