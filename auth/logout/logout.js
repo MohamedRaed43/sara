@@ -1,2 +1,10 @@
-document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
-window.location.href("https://mohamedraed43.github.io/sara/");
+document.addEventListener('DOMContentLoaded', () => {
+    // Clear the cookie first
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
+
+    // Clear localStorage if needed
+    localStorage.removeItem('token');  
+
+    // Then navigate back to login page
+    window.location.href = "/sara";
+});
