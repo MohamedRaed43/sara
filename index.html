@@ -25,11 +25,12 @@
       if(document.cookie!=""){
         let logged_in_span=document.getElementById("logged-in-user")
         logged_in_span.innerHTML=document.cookie.slice(document.cookie.indexOf('=') + 1);
-              document.getElementById("logged-in-user").after=`   <a href="auth/logout/logout.js" style="color: inherit;"> <span id="logout-user"  style="margin-right: 22px;font-size: 20px;">logout</span></a>
-`
+        const newTag = document.createElement("div");
+        newTag.textContent = "Logout";
 
-
+        
       }
+      document.getElementById("logged-in-user").after(newTag)
     </script>
   </header>
 <div class="container">
