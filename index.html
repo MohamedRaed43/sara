@@ -7,8 +7,7 @@
   <title>Sara </title>
   <link rel="stylesheet" href="index.css" >
     <link data-include="font.html">
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
         <script src="include.js" defer></script>
 
 </head>
@@ -19,7 +18,15 @@
     display: flex;
     direction: ltr;">
     <h1 style="margin: 0;flex-grow: 2;">Sara's Life Site</h1>
-   <a href="auth/login.html" style="color: inherit;""> <span  style="margin-right: 22px;font-size: 20px;">login</span></a>
+
+   <a href="auth/login.html" style="color: inherit;"> <span id="logged-in-user"  style="margin-right: 22px;font-size: 20px;">login</span></a>
+      <script>
+      if(document.cookie!=""){
+        let logged_in_span=document.getElementById("logged-in-user")
+        logged_in_span.innerHTML=document.cookie
+      }
+
+    </script>
   </header>
 <div class="container">
   <section>
