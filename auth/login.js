@@ -14,10 +14,10 @@ document.getElementById("form").addEventListener("submit",(e)=>{
           })("username",username.value,1);
        }
        else{
-          let error=document.getElementsByClassName(".error")[0];
-          error.classList.toggle("error-vis");
-          username.classList.toggle("error-inputs");
-          password.classList.toggle("error-inputs")
+          let error=document.getElementById("error");
+          error.classList.add("error-vis");
+          username.classList.add("error-inputs");
+          password.classList.add("error-inputs")
        }
       });
     }).catch(console.error);
