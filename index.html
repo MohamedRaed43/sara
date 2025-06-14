@@ -19,20 +19,26 @@
     direction: ltr;">
     <h1 style="margin: 0;flex-grow: 2;">Sara's Life Site</h1>
 
-   <a href="auth/login/login.html" style="color: inherit;"> <span id="logged-in-user"  style="margin-right: 22px;font-size: 20px;">login</span></a>
+   <a href="auth/login/login.html" style="color: inherit;"> <span id="logged-in-user"  class="header-login-sec">login</span></a>
       <script>
       
       if(document.cookie!=""){
         let logged_in_span=document.getElementById("logged-in-user")
         logged_in_span.innerHTML=document.cookie.slice(document.cookie.indexOf('=') + 1);
-        const newTag = document.createElement("div");
-        newTag.textContent = "Logout";
-
+    
+     const newChild = document.createElement('span');
+      newChild.textContent = "logout";
+      newChild.classList.add("logged-in-user");
+     const parent= document.getElementById("logged-in-user").parentElement;
+     parent.before(newChild);
         
       }
-      document.getElementById("logged-in-user").after(newTag)
+ 
     </script>
+
   </header>
+
+
 <div class="container">
   <section>
    <a href="stories/stories.html"> <h2>قصص</h2></a>
