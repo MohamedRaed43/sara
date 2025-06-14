@@ -12,6 +12,7 @@ document.getElementById("form").addEventListener("submit",(e)=>{
               expire.setTime(expire.getTime() + (days*24*60*60*1000))
               document.cookie=`${name}=${value}; expires=${expire.toUTCString()}; path=/`;
           })("username",username.value,1);
+          window.location.href="https://mohamedraed43.github.io/sara/";
        }
        else{
           let error=document.getElementById("error");

@@ -1,14 +1,14 @@
-//  const targetDate = new Date('2023-10-07T00:00:00');
+ const targetDate = new Date('2023-10-07T00:00:00');
 
-//     function updateCountdown() {
-//       const now = new Date();
-//       const diff = now-targetDate ;
-//       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-//       document.getElementById('countdown').textContent = `عدد ايام الحرب ${days}`;
-//     }
+    function updateCountdown() {
+      const now = new Date();
+      const diff = now-targetDate ;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById('countdown').textContent = `عدد ايام الحرب ${days}`;
+    }
 
-//     updateCountdown();
-//     setInterval(updateCountdown, 86400000); // update every day
+    updateCountdown();
+    setInterval(updateCountdown, 86400000); // update every day
 
     /// Your Firebase config (replace with your real config!)
     const firebaseConfig = {
