@@ -7,7 +7,7 @@ document.getElementById("form").addEventListener("submit",(e)=>{
       db.collection("auth").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
        if(doc.username==username.value && doc.password ==password){
-          ((name,vlaue,days)=>{
+          ((name,value,days)=>{
             const expire=new Date();
               expire.setTime(expire.getTime() + (days*24*60*60*1000))
               document.cookie=`${name}=${value}; expires=${expire.toUTCString()}; path=/`;
