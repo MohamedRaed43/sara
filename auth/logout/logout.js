@@ -1,2 +1,2 @@
 document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
-location.reload();
+window.location.href("https://mohamedraed43.github.io/sara/");

@@ -26,18 +26,18 @@
         let logged_in_span=document.getElementById("logged-in-user")
         logged_in_span.innerHTML=document.cookie.slice(document.cookie.indexOf('=') + 1);
 
-        const newChild = document.createElement('span');
-        newChild.textContent = "logout";
-        newChild.classList.add("logged-in-user");
         
-        const newparent=document.createElement("a");
-        newparent.setAttribute("href","auth/logout/logout.js");
-        newparent.append(newChild)
-      
-        const parent= document.getElementById("logged-in-user").parentElement;
-        parent.before(newparent);
-          
       }
+      const newChild = document.createElement('span');
+      newChild.textContent = "logout";
+      newChild.classList.add("logged-in-user");
+      
+      const newparent=document.createElement("a");
+      newparent.setAttribute("href","auth/logout/logout.js");
+      newparent.append(newChild)
+    
+      const parent= document.getElementById("logged-in-user").parentElement;
+      parent.before(newparent);
  
     </script>
 
