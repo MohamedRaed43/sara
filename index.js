@@ -24,9 +24,8 @@
     firebase.initializeApp(firebaseConfig);
 
     // Initialize Firestore
-    const db = firebase.firestore();
+    export const db = firebase.firestore();
 
-    // Write test data
     // db.collection("messages").add({
     //   name: "You",
     //   message: "Happy Birthday!"
@@ -34,7 +33,7 @@
     //   console.log("Message added!");
     // }).catch(console.error);
 
-    // // Read test data
+    // Read test data
     // db.collection("messages").get().then((querySnapshot) => {
     //   querySnapshot.forEach((doc) => {
     //     console.log(doc.id, "=>", doc.data());
