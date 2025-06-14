@@ -1,17 +1,5 @@
-    // import db from '../index.js';
-  const firebaseConfig = {
-      apiKey: "AIzaSyAX_5EfiF4Eaibpo1C8_M05K764HTpv180",
-      authDomain: "sara-database-95ed1.firebaseapp.com",
-      projectId: "sara-database-95ed1",
-      storageBucket: "sara-database-95ed1.appspot.com",
-      messagingSenderId: "626283901292",
-      appId: "1:626283901292:web:d1c7a8e3b77bd409894349"
-    };
+    import db from '../index.js';
 
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    // Initialize Firestore
 document.getElementById("form").addEventListener("submit",(e)=>{
     e.preventDefault();
     
