@@ -1,4 +1,4 @@
-import db from "../index.js";
+import db from "../../index.js";
 document.getElementById("form").addEventListener("submit",(e)=>{
     e.preventDefault();
     
