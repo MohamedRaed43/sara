@@ -98,6 +98,15 @@ body {
     outline: none;
 }
 
-
-    @media (max-width: 400px) {
-    }
+.error{
+  visibility: hidden;
+  color: #000000;
+    margin: 12px 0px;
+}
+.error-vis{
+  visibility: visible;
+}
+.error-inputs{
+  outline: red;
+  
+}
